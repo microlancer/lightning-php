@@ -13,19 +13,22 @@ $lightningApi->setRpcFile("/home/user/.lightning/lightning-rpc");
 
 // Get info
 
-$ret = $lightningApi->getInfo();
+$json = $lightningApi->getInfo();
+echo json_encode($json, JSON_PRETTY_PRINT);
 
 // Pay invoice
 
 $invoice = "ln123xyz...";
-$ret = $lightningApi->pay($invoice);
+$json = $lightningApi->pay($invoice);
+echo json_encode($json, JSON_PRETTY_PRINT);
 
 // Create invoice
 
 $msatoshi = 50000;
 $label = "Some label";
 $description = "Some description";
-$ret = $lightningApi->createinvoice($msatoshi, $label, $description);
+$json = $lightningApi->createinvoice($msatoshi, $label, $description);
+echo json_encode($json, JSON_PRETTY_PRINT);
 ```
 
 
