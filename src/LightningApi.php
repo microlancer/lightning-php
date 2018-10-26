@@ -6,9 +6,14 @@ class LightningApi
 {
     private $rpcFile;
 
+    /**
+     * Set the lightning RPC file, typically /home/<user>/.lightning/lightning-rpc
+     * 
+     * @param string $rpcFile Full path to lightning-rpc file.
+     */
     public function setRpcFile($rpcFile) 
     {
-        $this->rpcFile = $rpcFile;
+        $this->rpcFile = 'unix://' . $rpcFile;
     }
 
     private function sendCommand(array $input) 
