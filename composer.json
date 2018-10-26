@@ -1,7 +1,22 @@
 {
-    "require-dev": {
+    "name": "thorie7912/lightning-php",
+    "description": "PHP interface for the elements/c-lightning RPC API",
+    "keywords": ["bitcoin", "lightning", "c-lightning", "rpc", "api"],
+    "homepage": "https://github.com/thorie7912/lightning-php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tim Horie",
+            "email": "tak@thorie.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"Lightning\\": "src"}
     },
     "require": {
-        "clue/socket-raw": "^1.3"
+        "ext-sockets": "*",
+        "php": ">=5.3"
+    },
+    "require-dev": {
     }
 }

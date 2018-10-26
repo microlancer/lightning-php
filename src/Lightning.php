@@ -36,7 +36,7 @@ class LightningApi
             "params" => [],
             "id" => 0
         ];
-        return self::sendCommand($input);
+        return $this->sendCommand($input);
     }
 
     public function invoice($msatoshi, $label, $description) 
@@ -50,7 +50,7 @@ class LightningApi
             ],
             "id" => 0
         ];
-        return self::sendCommand($input);
+        return $this->sendCommand($input);
     }
 
     public function listinvoices($label) 
@@ -62,7 +62,7 @@ class LightningApi
             ],
             "id" => 0
         ];
-        return self::sendCommand($input);
+        return $this->sendCommand($input);
     }
 
     public function decodepay($bolt11) 
@@ -74,7 +74,7 @@ class LightningApi
             ],
             "id" => 0
         ];
-        return self::sendCommand($input);
+        return $this->sendCommand($input);
     }
 
     public function pay($bolt11, $msatoshi) 
@@ -86,7 +86,7 @@ class LightningApi
             ],
             "id" => 0
         ];
-        return self::sendCommand($input);
+        return $this->sendCommand($input);
     }
 
 }
