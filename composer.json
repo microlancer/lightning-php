@@ -1,0 +1,7 @@
+{
+    "require-dev": {
+    },
+    "require": {
+        "clue/socket-raw": "^1.3"
+    }
+}
